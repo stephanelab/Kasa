@@ -1,3 +1,6 @@
+import Banner from "../../components/Banner"
+import bannerAbout from "../../assets/Image_Banner_About.png"
+
 export default function About() {
-  return <h1>Bienvenue sur la page A-Propos</h1>
+  return <Banner title="" picture={bannerAbout} />
 }
