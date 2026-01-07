@@ -8,6 +8,7 @@ import "./styles.scss"
 const { HOME_BANNER } = TEXTS
 
 export default function Home() {
+  // Récupération des properties sur l'API
   const [properties, updateProperties] = useState([])
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function Home() {
     <div>
       <Banner title={HOME_BANNER} picture={bannerHome} />
       <div className="card-container">
-        {properties.map((property) => (
+        {properties.map((property) => ( //Mappage des propriétés pour afficher chaque carte (appel du composant Card pour chaque property) 
           <Card key={property.id} property={property} />
         ))}
       </div>
