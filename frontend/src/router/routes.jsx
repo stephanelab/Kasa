@@ -14,7 +14,7 @@ const routes = [
         element: <Home />,
       },
       {
-        path: "logement",
+        path: "logement/:id",
         element: <FicheLogement />,
       },
       {
