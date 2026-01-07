@@ -1,0 +1,51 @@
+@use "../../styles/_variables" as *;
+@use "../../styles/_mixins" as *;
+
+.banner {
+  padding: 0 100px;
+  width: calc(100% - 200px);
+  height: 223px;
+  @media (max-width: 800px) {
+    height: 111px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  &__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  h1 {
+    position: absolute;
+    inset: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 800px) {
+      font-size: 1.5rem;
+      text-align: left;
+      justify-content: flex-start;
+    }
+  }
+}
