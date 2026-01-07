@@ -1,0 +1,40 @@
+@use "../../styles/_variables" as *;
+@use "../../styles/_mixins" as *;
+
+.dropdown {
+  margin: 30px 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $secondary-color;
+  max-width: 1023px;
+  width: 100%;
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+    background-color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $white;
+    border: none;
+    border-radius: 10px;
+    @media (max-width: 800px) {
+      font-size: 0.813rem;
+    }
+  }
+  &__content {
+    max-width: 1023px;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    padding: 20px 0px;
+    font-size: 1.1rem;
+    color: $black;
+    @media (max-width: 800px) {
+      font-size: 0.813rem;
+    }
+  }
+}

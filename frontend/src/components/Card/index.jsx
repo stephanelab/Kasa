@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import "../../styles/styles.scss"
+import "./styles.scss"
 
 function Card() {
   const [properties, updateProperties] = useState([])

@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner"
 import bannerAbout from "../../assets/Image_Banner_About.png"
 import Dropdown from "../../components/Dropdown"
-import "../../styles/styles.scss"
+import "./styles.scss"
 
 export default function About() {
   return (

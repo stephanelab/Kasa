@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Open from "../../assets/icon_open.svg"
 import Close from "../../assets/icon_close.svg"
-import "../../styles/styles.scss"
+import "./styles.scss"
 
 function Dropdown({ title, content }) {
   const [isOpen, setIsOpen] = useState(false)
