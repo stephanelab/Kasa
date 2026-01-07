@@ -10,7 +10,7 @@ export default function Header() {
     <div className="header">
       <img className="header__logo" src={logo} alt="KASA Logo" />
       <nav className="header__nav">
-        <NavLink
+        <NavLink // Utilisation de Navlink afin de pouvoir utiliser la propriété isActive pour styliser le lien actif
           to="/"
           end
           className={({ isActive }) =>

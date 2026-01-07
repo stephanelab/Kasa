@@ -4,6 +4,7 @@ import Dropdown from "../../components/Dropdown"
 import "./styles.scss"
 import { TEXTS } from "../../data/texts"
 
+// Récupération des textes utiles depuis le fichier texts.js
 const {
   ABOUT_TITLE1,
   ABOUT_CONTENT1,
