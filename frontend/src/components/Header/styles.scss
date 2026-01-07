@@ -12,9 +12,12 @@
     @include texte;
     color: $black;
   }
-  a {
+  &__navLink {
     text-decoration: none;
     color: $black;
+    &--underline {
+      text-decoration: underline;
+    }
   }
   &__logo {
     width: 210px;
