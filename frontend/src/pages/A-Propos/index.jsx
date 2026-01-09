@@ -18,12 +18,14 @@ const {
 
 export default function About() {
   return (
-    <div className="about">
+    <div>
       <Banner title="" picture={bannerAbout} />
-      <Dropdown title={ABOUT_TITLE1} content={ABOUT_CONTENT1} />
-      <Dropdown title={ABOUT_TITLE2} content={ABOUT_CONTENT2} />
-      <Dropdown title={ABOUT_TITLE3} content={ABOUT_CONTENT3} />
-      <Dropdown title={ABOUT_TITLE4} content={ABOUT_CONTENT4} />
+      <div className="about">
+        <Dropdown title={ABOUT_TITLE1} content={ABOUT_CONTENT1} />
+        <Dropdown title={ABOUT_TITLE2} content={ABOUT_CONTENT2} />
+        <Dropdown title={ABOUT_TITLE3} content={ABOUT_CONTENT3} />
+        <Dropdown title={ABOUT_TITLE4} content={ABOUT_CONTENT4} />
+      </div>
     </div>
   )
 }

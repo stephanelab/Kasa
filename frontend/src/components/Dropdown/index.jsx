@@ -3,11 +3,11 @@ import Open from "../../assets/icon_open.svg"
 import Close from "../../assets/icon_close.svg"
 import "./styles.scss"
 
-function Dropdown({ title, content }) {
+function Dropdown({ title, content, className }) {
   const [isOpen, setIsOpen] = useState(false)
   return isOpen ? (
     <div className="dropdown">
-      <button className="dropdown__button">
+      <button className={`dropdown__button ${className || ""}`}>
         {title}
         <img
           className="dropdown__icon--open"
@@ -15,13 +15,11 @@ function Dropdown({ title, content }) {
           onClick={() => setIsOpen(false)}
         ></img>
       </button>
-      <div className="dropdown__content">
-        <p>{content}</p>
-      </div>
+      <div className="dropdown__content">{content}</div>
     </div>
   ) : (
     <div className="dropdown">
-      <button className="dropdown__button">
+      <button className={`dropdown__button ${className || ""}`}>
         {title}
         <img
           className="dropdown__icon--close"
