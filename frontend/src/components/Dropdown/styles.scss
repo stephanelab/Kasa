@@ -2,7 +2,6 @@
 @use "../../styles/_mixins" as *;
 
 .dropdown {
-  margin: 30px 100px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +21,9 @@
     color: $white;
     border: none;
     border-radius: 10px;
+    &--housing {
+      font-size: 1.1rem;
+    }
     @media (max-width: 800px) {
       font-size: 0.813rem;
     }
@@ -34,7 +36,7 @@
     font-size: 1.1rem;
     color: $black;
     @media (max-width: 800px) {
-      font-size: 0.813rem;
+      font-size: 0.75rem;
     }
   }
 }
