@@ -19,7 +19,9 @@ const {
 export default function About() {
   return (
     <div>
+      {/* Appel de la bannière */}
       <Banner title="" picture={bannerAbout} />
+      {/* Ajout des dropdowns */}
       <div className="about">
         <Dropdown title={ABOUT_TITLE1} content={ABOUT_CONTENT1} />
         <Dropdown title={ABOUT_TITLE2} content={ABOUT_CONTENT2} />

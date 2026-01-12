@@ -1,6 +1,8 @@
 export const TEXTS = {
-  HOME_BANNER: "Chez vous, partout et ailleurs",
-  FOOTER_LEGAL: "© 2020 Kasa. All rights reserved",
+  HOME_BANNER1: "Chez vous, ",
+  HOME_BANNER2: "partout et ailleurs",
+  FOOTER_LEGAL1: "© 2020 Kasa. All ",
+  FOOTER_LEGAL2: "rights reserved",
   HEADER_HOME: "Accueil",
   HEADER_ABOUT: "A Propos",
   ABOUT_TITLE1: "Fiabilité",
@@ -17,4 +19,6 @@ export const TEXTS = {
     "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
   HOUSING_TITLE1: "Description",
   HOUSING_TITLE2: "Équipements",
+  ERROR_TXT: "Oups! La page que vous demandez n'existe pas.",
+  ERROR_LINK: "Retourner sur la page d’accueil",
 }
