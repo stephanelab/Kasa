@@ -5,6 +5,7 @@ import Dropdown from "../../components/Dropdown"
 import { useState, useEffect } from "react"
 import "./styles.scss"
 import { TEXTS } from "../../data/texts"
+import { useNavigate } from "react-router"
 
 // Récupération des textes utiles depuis le fichier texts.js
 const { HOUSING_TITLE1, HOUSING_TITLE2 } = TEXTS
@@ -14,6 +15,8 @@ export default function FicheLogement() {
 
   // Récupération des properties sur l'API
   const [property, updateProperty] = useState(null)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchProperty = async () => {
@@ -28,11 +31,12 @@ export default function FicheLogement() {
         updateProperty(data)
       } catch (error) {
         console.error("Error fetching property:", error)
+        navigate("/404")
       }
     }
 
     fetchProperty()
-  }, [id])
+  }, [id, navigate])
 
   if (!property) {
     return <div>Loading...</div>

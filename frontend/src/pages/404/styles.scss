@@ -1,5 +1,4 @@
 @use "../../styles/_variables" as *;
-@use "../../styles/_mixins" as *;
 
 .error {
   display: flex;
@@ -9,26 +8,26 @@
   margin: 100px 0;
   &__number {
     font-weight: 700;
-    font-size: 288px;
+    font-size: 18rem;
     color: $primary-color;
     @media (max-width: 800px) {
-      font-size: 96px;
+      font-size: 6rem;
     }
   }
   &__txt {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 2.25rem;
     color: $primary-color;
     @media (max-width: 800px) {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
   }
   &__link {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: $black;
     @media (max-width: 800px) {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 }
