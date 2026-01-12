@@ -74,23 +74,27 @@ export default function FicheLogement() {
       </div>
       <div className="housing-dropdowns">
         {/* Appel des 2 dropdowns */}
-        <Dropdown
-          className="dropdown__button--housing"
-          title={HOUSING_TITLE1}
-          content={property.description}
-        />
-        <Dropdown
-          className="dropdown__button--housing"
-          title={HOUSING_TITLE2}
-          content={
-            <ul className="housing-dropdowns__list">
-              {/* vu que la propriété equipments est un tableau, on map dessus car il y en a plusieurs et on les met en élément de liste */}
-              {property.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          }
-        />
+        <div className="housing-dropdowns__item">
+          <Dropdown
+            className="dropdown__button--housing"
+            title={HOUSING_TITLE1}
+            content={property.description}
+          />
+        </div>
+        <div className="housing-dropdowns__item">
+          <Dropdown
+            className="dropdown__button--housing"
+            title={HOUSING_TITLE2}
+            content={
+              <ul className="housing-dropdowns__list">
+                {/* vu que la propriété equipments est un tableau, on map dessus car il y en a plusieurs et on les met en élément de liste */}
+                {property.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            }
+          />
+        </div>
       </div>
     </div>
   )
