@@ -40,12 +40,15 @@ export default function FicheLogement() {
 
   return (
     <div>
+      {/* Appel du Slideshow */}
       <Slideshow pictures={property.pictures} />
       <div className="housing-header">
+        {/* Information sur le logement */}
         <div className="info">
           <h1 className="info__title">{property.title}</h1>
           <h2 className="info__location">{property.location}</h2>
           <div className="info__tags">
+            {/* vu que la propriété tags est un tableau, on map dessus car il y en a plusieurs */}
             {property.tags.map((tag, index) => (
               <p className="info__tags__tag" key={index}>
                 {tag}
@@ -53,6 +56,7 @@ export default function FicheLogement() {
             ))}
           </div>
         </div>
+        {/* Information sur l'hôte */}
         <div className="host-rating">
           <div className="host">
             <p className="host__name">{property.host.name}</p>
@@ -63,11 +67,13 @@ export default function FicheLogement() {
             />
           </div>
           <div className="rating">
+            {/* Appel du composant Rating */}
             <Rating rate={property.rating} />
           </div>
         </div>
       </div>
       <div className="housing-dropdowns">
+        {/* Appel des 2 dropdowns */}
         <Dropdown
           className="dropdown__button--housing"
           title={HOUSING_TITLE1}
@@ -77,7 +83,8 @@ export default function FicheLogement() {
           className="dropdown__button--housing"
           title={HOUSING_TITLE2}
           content={
-            <ul>
+            <ul className="housing-dropdowns__list">
+              {/* vu que la propriété equipments est un tableau, on map dessus car il y en a plusieurs et on les met en élément de liste */}
               {property.equipments.map((equipment, index) => (
                 <li key={index}>{equipment}</li>
               ))}

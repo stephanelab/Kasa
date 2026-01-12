@@ -14,4 +14,9 @@
   &__logo {
     width: 122px;
   }
+  &__legal {
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
 }

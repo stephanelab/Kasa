@@ -23,6 +23,10 @@ const routes = [
         element: <About />,
       },
       {
+        path: "404",
+        element: <Error404 />,
+      },
+      {
         path: "*",
         element: <Error404 />,
       },

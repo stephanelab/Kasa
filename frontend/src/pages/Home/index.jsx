@@ -6,7 +6,8 @@ import { useState, useEffect } from "react"
 import "./styles.scss"
 import { Link } from "react-router-dom"
 
-const { HOME_BANNER } = TEXTS
+// Récupération des textes utiles depuis le fichier texts.js
+const { HOME_BANNER1, HOME_BANNER2 } = TEXTS
 
 export default function Home() {
   // Récupération des properties sur l'API
@@ -31,17 +32,20 @@ export default function Home() {
 
   return (
     <div>
-      <Banner title={HOME_BANNER} picture={bannerHome} />
+      {/* Appel de la bannière */}
+      <Banner
+        title1={HOME_BANNER1}
+        title2={HOME_BANNER2}
+        picture={bannerHome}
+      />
       <div className="card-container">
-        {properties.map(
-          (
-            property //Mappage des propriétés pour afficher chaque carte (appel du composant Card pour chaque property)
-          ) => (
-            <Link to={`logement/${property.id}`} key={property.id}>
-              <Card key={property.id} property={property} />
-            </Link>
-          )
-        )}
+        {/* Mappage des propriétés pour afficher chaque carte (appel du composant Card pour chaque property) */}
+        {properties.map((property) => (
+          // Ajout d'un lien vers la page de la fiche logement
+          <Link to={`logement/${property.id}`} key={property.id}>
+            <Card key={property.id} property={property} />
+          </Link>
+        ))}
       </div>
     </div>
   )

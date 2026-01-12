@@ -6,6 +6,7 @@ import "./styles.scss"
 function Dropdown({ title, content, className }) {
   const [isOpen, setIsOpen] = useState(false)
   return isOpen ? (
+    // Affichage du dropdown ouvert
     <div className="dropdown">
       <button className={`dropdown__button ${className || ""}`}>
         {title}
@@ -18,6 +19,7 @@ function Dropdown({ title, content, className }) {
       <div className="dropdown__content">{content}</div>
     </div>
   ) : (
+    // Affichage du dropdown fermé
     <div className="dropdown">
       <button className={`dropdown__button ${className || ""}`}>
         {title}
