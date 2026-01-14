@@ -5,7 +5,7 @@ function Banner({ title1, title2, picture }) {
     <div className="banner">
       <div className="banner__image">
         <img src={picture} alt={`${title1} ${title2}`} />
-        <div className="banner__image__text">
+        <div className="banner__image__text" data-testid="title">
           {title1}
           <span className="txt_break">{title2}</span>
         </div>
