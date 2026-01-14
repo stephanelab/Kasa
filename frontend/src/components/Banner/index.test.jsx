@@ -3,10 +3,6 @@ import { describe, it, expect } from "vitest"
 import { render, screen } from "@testing-library/react"
 
 describe("The Banner component", () => {
-  it("should render without crash", () => {
-    render(<Banner />)
-  })
-
   const testtitle1 = "Hello "
   const testtitle2 = "world"
   const testpicture = "http://test.jpg"

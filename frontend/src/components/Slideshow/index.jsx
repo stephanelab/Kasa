@@ -11,11 +11,13 @@ export default function Slideshow({ pictures }) {
         src={pictures[currentIndex]}
         alt="Slideshow"
         className="slideshow__image"
+        data-testid="test-image"
       />
       <img
         src={Left_arrow}
         alt="Image précédente"
         className="slideshow__leftarrow"
+        data-testid="test-leftarrow"
         onClick={() =>
           setCurrentIndex(
             currentIndex > 0 ? currentIndex - 1 : pictures.length - 1
@@ -26,6 +28,7 @@ export default function Slideshow({ pictures }) {
         src={Right_arrow}
         alt="Image suivante"
         className="slideshow__rightarrow"
+        data-testid="test-rightarrow"
         onClick={() =>
           setCurrentIndex(
             currentIndex < pictures.length - 1 ? currentIndex + 1 : 0
