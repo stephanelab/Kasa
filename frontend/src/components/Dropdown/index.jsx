@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Open from "../../assets/icon_open.svg"
 import Close from "../../assets/icon_close.svg"
 import "./styles.scss"
 
@@ -11,12 +10,14 @@ function Dropdown({ title, content, className }) {
       <button className={`dropdown__button ${className || ""}`}>
         {title}
         <img
-          className="dropdown__icon--open"
-          src={isOpen ? Open : Close}
+          className="dropdown__icon"
+          src={Close}
           onClick={() => setIsOpen(!isOpen)}
         ></img>
       </button>
-      <div className="dropdown__content">{content}</div>
+      <div className="dropdown__panel">
+        <div className="dropdown__content">{content}</div>
+      </div>
     </div>
   )
 }
